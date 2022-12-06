@@ -32,3 +32,7 @@ Python project:
 3- Wait until the message appears: Starting service on port: 8888
 
 4- From this moment you can make inquiries in the application.
+
+
+![alt text](https://github.com/joelantoniov/search-engine/blob/main/ramen-search.tiff)
+
