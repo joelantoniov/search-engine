@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col s12">
+    <%= form_tag("/search", method: "post") do %>
+    <%= label_tag(:q, "Ingrese palabras a buscar") %>
+    <%= text_field_tag(:q, @query) %>
+    <%= submit_tag("Buscar", :class => "btn") %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <h3>Resultados</h3>
+    <ul>
+    <% @results.each do |n| %>
+    <li class="collection-item">
+        <span class="title"><a href="<%= n[4] %>"><%= n[2] %></a></span>
+        <p>
+          <%= n[1] %> - <span class="badge"><%= n[5] %></span> 
+          <span class="btn disabled">
+            <%= n[0.to_f] %> 
+          </span>
+        </p>
+    </li>
+    <% end %>
+    </ul>
+  </div>
+</div>
